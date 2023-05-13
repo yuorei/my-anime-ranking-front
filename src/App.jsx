@@ -3,6 +3,7 @@ import Home from "./component/Home";
 import Login from "./component/Login";
 import UserList from "./component/UserList";
 import RegisterUserForm from "./component/RegisterUserForm";
+import UserAnimes from "./component/UserAnimes";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/register-user" element={<RegisterUserForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/users" element={<UserList />} />
+          <Route path="/:userId/animes" element={<UserAnimes />} />
         </Routes>
       </Router>
     </div>

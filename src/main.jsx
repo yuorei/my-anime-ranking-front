@@ -7,10 +7,15 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { createUploadLink } from "apollo-upload-client";
 import App from "./App.jsx";
 import "./index.css";
+
 const url = import.meta.env.VITE_URL;
 const httpLink = createHttpLink({
+  uri: url,
+});
+const uploadLink = createUploadLink({
   uri: url,
 });
 
@@ -30,7 +35,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: authLink.concat(uploadLink).concat(httpLink),
   cache: new InMemoryCache(),
 });
 

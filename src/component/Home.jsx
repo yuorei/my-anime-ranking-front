@@ -7,7 +7,7 @@ function Home() {
       <br></br>
       <Link to="/register-user">ユーザー登録</Link>
       <br></br>
-      <Link to="/users">みんなの投稿</Link>
+      <Link to="/users">全てのユーザー</Link>
       <br></br>
       <Link to="/explain">このサイトの説明</Link>
       <br></br>

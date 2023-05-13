@@ -22,6 +22,9 @@ function RegisterUserForm() {
   const [registerUser, { loading, error }] = useMutation(REGISTER_USER);
 
   const handleSubmit = (e) => {
+    if (localStorage.getItem("token") != "") {
+      localStorage.clear();
+    }
     e.preventDefault();
     alert(profileImage);
     registerUser({

@@ -5,6 +5,8 @@ function Home() {
     <div className="home">
       <Link to="/login">ログイン</Link>
       <br></br>
+      <Link to="/register-user">ユーザー登録</Link>
+      <br></br>
       <Link to="/users">みんなの投稿</Link>
       <br></br>
       <Link to="/explain">このサイトの説明</Link>

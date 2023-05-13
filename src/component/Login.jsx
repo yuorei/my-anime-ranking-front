@@ -28,6 +28,9 @@ const Login = () => {
   const [loginMutation, { data }] = useMutation(LOGIN_MUTATION);
 
   const handleFormSubmit = (e) => {
+    if (localStorage.getItem("token") != "") {
+      localStorage.clear();
+    }
     e.preventDefault();
 
     loginMutation({
@@ -38,6 +41,7 @@ const Login = () => {
     }).then(({ data }) => {
       if (data.auth.login.success) {
         localStorage.setItem("token", data.auth.login.token);
+        location = "/";
       }
     });
   };
@@ -61,9 +65,7 @@ const Login = () => {
           </label>
         </div>
         <button type="submit">Login</button>
-        {data && data.auth.login.success && (
-          <div>ようこそ {data.auth.login.token} さん</div>
-        )}
+        {data && data.auth.login.success && <div>ようこそ {name} さん</div>}
       </form>
     </div>
   );

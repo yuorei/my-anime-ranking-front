@@ -26,7 +26,6 @@ function RegisterUserForm() {
       localStorage.clear();
     }
     e.preventDefault();
-    alert(profileImage);
     registerUser({
       variables: {
         input: {
@@ -40,7 +39,6 @@ function RegisterUserForm() {
       console.log(result);
       location = "/login";
     });
-    alert(name);
   };
 
   return (

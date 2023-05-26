@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #7c5555;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -111,3 +111,23 @@ button:focus-visible {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+/* .home {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+
+}
+
+.home a {
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.home a:hover {
+  text-decoration: underline;
+} */

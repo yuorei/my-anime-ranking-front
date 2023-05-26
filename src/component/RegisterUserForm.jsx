@@ -73,7 +73,7 @@ function RegisterUserForm() {
       <button className="submit-button" type="submit" disabled={loading}>
         {loading ? "登録中..." : "登録"}
       </button>
-      {error && <div>エラーが発生しました</div>}
+      {error && <div className="error-message">エラーが発生しました</div>}
     </form>
   );
 }

@@ -47,24 +47,32 @@ const Login = () => {
   };
   return (
     <div className="login">
-      <form onSubmit={handleFormSubmit}>
+      <form className="form-container" onSubmit={handleFormSubmit}>
         <div>
           <label>
             Name:
-            <input type="text" value={name} onChange={handleNameChange} />
+            <input
+              className="input-field"
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+            />
           </label>
         </div>
         <div>
           <label>
             Password:
             <input
+              className="input-field"
               type="password"
               value={password}
               onChange={handlePasswordChange}
             />
           </label>
         </div>
-        <button type="submit">Login</button>
+        <button className="submit-button" type="submit">
+          Login
+        </button>
         {data && data.auth.login.success && <div>ようこそ {name} さん</div>}
       </form>
     </div>

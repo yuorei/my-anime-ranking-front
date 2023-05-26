@@ -4,7 +4,7 @@ import Login from "./component/Login";
 import UserList from "./component/UserList";
 import RegisterUserForm from "./component/RegisterUserForm";
 import UserAnimes from "./component/UserAnimes";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

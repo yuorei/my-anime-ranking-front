@@ -42,8 +42,9 @@ function RegisterUserForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-container" onSubmit={handleSubmit}>
       <input
+        className="input-field"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -51,6 +52,7 @@ function RegisterUserForm() {
         required
       />
       <input
+        className="input-field"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -58,12 +60,17 @@ function RegisterUserForm() {
         required
       />
       <textarea
+        className="textarea-field"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="自己紹介"
       />
-      <input type="file" onChange={(e) => setProfileImage(e.target.files[0])} />
-      <button type="submit" disabled={loading}>
+      <input
+        className="file-field"
+        type="file"
+        onChange={(e) => setProfileImage(e.target.files[0])}
+      />
+      <button className="submit-button" type="submit" disabled={loading}>
         {loading ? "登録中..." : "登録"}
       </button>
       {error && <div>エラーが発生しました</div>}

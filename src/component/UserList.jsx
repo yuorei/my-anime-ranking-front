@@ -17,6 +17,11 @@ const GET_ALL_USERS_QUERY = gql`
 const UserList = () => {
   const { loading, error, data } = useQuery(GET_ALL_USERS_QUERY);
 
+  const handleLinkClick = (userId) => {
+    localStorage.removeItem("userId");
+    localStorage.setItem("userId", userId);
+  };
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error </p>;
 
@@ -25,7 +30,10 @@ const UserList = () => {
       <h2>User List</h2>
       {data.GetAllUserInformation.map((user) => (
         <div key={user.id}>
-          <Link to={`/${user.id}/animes`}>
+          <Link
+            to={`/${user.id}/animes`}
+            onClick={() => handleLinkClick(user.id)}
+          >
             <h3>{user.name}</h3>
             <p>{user.description}</p> {/*TODO なぜか取れてきていない*/}
             <img src={user.profileImageURL} width="10%" height="10%"></img>

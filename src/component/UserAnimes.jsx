@@ -20,8 +20,7 @@ const GET_USER_QUERY = gql`
 `;
 
 const UserAnimes = () => {
-  let path = window.location.pathname;
-  let userId = path.split("/")[2];
+  let userId = localStorage.getItem("userId");
   const { loading, error, data } = useQuery(GET_USER_QUERY, {
     variables: { id: userId },
   });

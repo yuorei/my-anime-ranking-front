@@ -37,7 +37,7 @@ function RegisterUserForm() {
       },
     }).then((result) => {
       console.log(result);
-      location = "/login";
+      location = "/#/login";
     });
   };
 

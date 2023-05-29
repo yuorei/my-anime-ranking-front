@@ -76,7 +76,7 @@ function UploadAnimeForm() {
       />
       <input
         className="file-field"
-        type="file"
+        type="image"
         onChange={(e) => setAnimeImage(e.target.files[0])}
         required
       />

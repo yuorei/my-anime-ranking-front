@@ -67,7 +67,7 @@ function RegisterUserForm() {
       />
       <input
         className="file-field"
-        type="file"
+        type="image"
         onChange={(e) => setProfileImage(e.target.files[0])}
       />
       <button className="submit-button" type="submit" disabled={loading}>
